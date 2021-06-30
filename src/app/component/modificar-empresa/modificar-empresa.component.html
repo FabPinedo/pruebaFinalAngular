@@ -1,0 +1,49 @@
+<div class="card bg-white text-dark">
+  <div class="card-header">{{info}}</div>
+  <div class="card-body">
+    <form (ngSubmit)="modificar()">
+      <div class="form-group row">
+        <label for="id" class="col-form-label col-sm-2">Razon social</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="empresa.des_razon_social" name="razonsocial">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="id" class="col-form-label col-sm-2">Nombre Comercial</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="empresa.des_nombre_Comercial" name="nombreComercial">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="id" class="col-form-label col-sm-2">Direccion</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="empresa.des_direccion" name="direccion">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="id" class="col-form-label col-sm-2">RUC </label>
+        <div class="col-sm-6">
+          <input type="int" class="form-control" [(ngModel)]="empresa.num_RUC_empresa" name="ruc">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="contrasena" class="col-form-label col-sm-2">Representante Legal</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="empresa.num_doc_repres" name="NombreRepre">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="id" class="col-form-label col-sm-2">Documento del representante legal</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="empresa.des_repres_legal" name="docRepresentante">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button"> Modificar datos de empresa </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

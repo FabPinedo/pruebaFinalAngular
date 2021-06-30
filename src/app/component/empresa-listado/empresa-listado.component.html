@@ -1,0 +1,33 @@
+<div class ="container">
+  <div class = "card">
+      <h3 class="text-center"> Listado de empresas</h3>
+      <div class = "card-body">
+          <table class="table table-striped">
+              <thead style="text-align: center; ">
+                  <th> codEmpresa </th>
+                  <th> des_razonsocial</th>
+                  <th> des_nombreComercial</th>
+                  <th> des_direccion </th>
+                  <th> num_RUC_empresa </th>
+                  <th> doc_representante </th>
+                  <th> nombre_representante </th>
+                  <th> Editar </th>
+              </thead>
+              <tbody style="text-align: center; ">
+                  <tr *ngFor = "let empresa of empresas">
+                      <td> {{ empresa.cod_Empresa}}</td>
+                      <td> {{ empresa.des_razon_social}}</td>
+                      <td> {{ empresa.des_nombre_Comercial}}</td>
+                      <td> {{ empresa.des_direccion}}</td>
+                      <td> {{ empresa.num_RUC_empresa}}</td>
+                      <td> {{ empresa.num_doc_repres}}</td>
+                      <td> {{ empresa.des_repres_legal}}</td>
+                      <td>
+                        <button type="button" name="button" [routerLink]="['modificarEmpresa',empresa.cod_Empresa]" class="btn btn-primary">editar</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
