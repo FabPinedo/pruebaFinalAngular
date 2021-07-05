@@ -24,9 +24,9 @@ export class ModificarEmpresaComponent implements OnInit {
 
  cargarEmpresa():void {
       this.activatedRoute.params.subscribe(params=>{
-        let id= params['cod_Empresa']
-        if(id){
-          this.EmpresaServicio.obtenerEmpresa(id).subscribe((empresa)=> this.empresa=empresa)
+        let cod_Empresa= params['cod_empresa']
+        if(cod_Empresa){
+          this.EmpresaServicio.obtenerEmpresa(cod_Empresa).subscribe((empresa)=> this.empresa=empresa)
         }
       })
       console.log(this.empresa)
@@ -36,7 +36,7 @@ export class ModificarEmpresaComponent implements OnInit {
 
     console.log(this.empresa)
     this.EmpresaServicio.modificarEmpresa(this.empresa).subscribe(
-      response=>this.route.navigate(["mostrarListado"])
+      response=>this.route.navigate(["MostrarListado"])
     )
 
   }

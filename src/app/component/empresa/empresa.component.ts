@@ -22,7 +22,7 @@ export class EmpresaComponent implements OnInit {
 
     console.log(this.empresa)
     this.EmpresaServicio.crearEmpresa(this.empresa).subscribe(
-      response=>this.route.navigate(["mostrarListado"])
+      response=>this.route.navigate(["MostrarListado"])
     )
 
   }

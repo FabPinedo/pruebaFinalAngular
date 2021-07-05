@@ -19,7 +19,7 @@ export class EmpresaEliminarComponent implements OnInit {
   public eliminar(codigo:string){
     alert("Borrara estos datos ");
 
-    this.EmpresaServicio.eliminarEmpresa(codigo).subscribe(response=>this.route.navigate(["mostrarListado"]))
+    this.EmpresaServicio.eliminarEmpresa(codigo).subscribe(response=>this.route.navigate(["MostrarListado"]))
 
 
   }

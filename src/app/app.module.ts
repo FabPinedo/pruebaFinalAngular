@@ -17,18 +17,22 @@ import { HomeComponent } from './component/home.component';
 import { ModificarEmpresaComponent } from './component/modificar-empresa/modificar-empresa.component';
 const appRoutes = [
   { path: '', component: InicioComponent,  pathMatch: 'full'},
-  { path: 'home', component: HomeComponent,
+  { path: 'MostrarListado', component: EmpresaListadoComponent},
+  { path: 'MostrarListado/modificarEmpresa/:cod_empresa', component: ModificarEmpresaComponent},
+  { path: 'crearEmpresa', component: EmpresaComponent },
+  { path: 'eliminarEmpresa', component: EmpresaEliminarComponent}
+  /*{ path: 'home', component: HomeComponent,
       children: [
         { path: 'crearEmpresa', component: EmpresaComponent },
         { path: 'eliminarEmpresa', component: EmpresaEliminarComponent},
-        { path: 'mostrarListado', component: EmpresaListadoComponent , children:[
-
+        { path: 'MostrarListado', component: EmpresaListadoComponent , children:[
+          { path: 'modificarEmpresa/:cod_empresa', component: ModificarEmpresaComponent}
         ]},
         { path: 'modificarEmpresa', component: ModificarEmpresaComponent},
         { path: 'modificarEmpresa/:cod_empresa', component: ModificarEmpresaComponent}
 
       ]
-    }
+    }*/
 
 
 

@@ -20,8 +20,8 @@ export class EmpresaService {
   crearEmpresa(empresa:Empresa): Observable<Empresa>{
     return this.http.post<Empresa>(this.baseUrl,empresa,{headers:this.cabezera})
   }
-  obtenerEmpresa(id: string):Observable<Empresa>{
-    return this.http.get<Empresa>(`${this.baseUrl}/${id}`)
+  obtenerEmpresa(cod_Empresa: string):Observable<Empresa>{
+    return this.http.get<Empresa>(`${this.baseUrl}/${cod_Empresa}`)
   }
   modificarEmpresa(empresa:Empresa):Observable<Empresa>{
     return this.http.put<Empresa>(`${this.baseUrl}/${empresa.cod_Empresa}`,empresa,{headers:this.cabezera})

@@ -20,7 +20,7 @@ public validar(){
 }
   login() : void {
     if(this.user.id== 'admin' && this.user.contrasena == 'admin'){
-     this.route.navigate(["home"]);
+     this.route.navigate(["MostrarListado"]);
     }else {
       alert("Credenciales Invalidas");
     }
